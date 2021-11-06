@@ -40,6 +40,20 @@ import { bootstrap } from 'lib/bootstrap-client'
 import { fathomId, fathomConfig } from 'lib/config'
 import * as Fathom from 'fathom-client'
 
+import ProgressBar from '@badrap/bar-of-progress'
+import Router from 'next/router'
+
+const progress = new ProgressBar({
+  size: 2,
+  color: '#95979b',
+  className: 'bar-of-progress',
+  delay: 100
+})
+
+Router.events.on('routeChangeStart', progress.start)
+Router.events.on('routeChangeComplete', progress.finish)
+Router.events.on('routeChangeError', progress.finish)
+
 if (typeof window !== 'undefined') {
   bootstrap()
 }
