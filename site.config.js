@@ -1,6 +1,7 @@
 module.exports = {
   // where it all starts -- the site's root Notion page (required)
   //https://www.notion.so/kherrisan/Kherrisan-69ecb7566fda4055ad6b8b0f45e78d59
+  //https://kherrisan.notion.site/Test-Page-737413ec9e6d4f9c88be1935868abd22
   rootNotionPageId: 'Kherrisan-69ecb7566fda4055ad6b8b0f45e78d59',
 
   // if you want to restrict pages to a single notion workspace (optional)
@@ -9,7 +10,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Kherrisan\'s Portifolio',
-  domain: 'kherrisan.com',
+  domain: '',
   author: 'Kherrisan',
 
   // open graph metadata (optional)
@@ -18,8 +19,8 @@ module.exports = {
   socialImageSubtitle: 'Hello World! 👋',
 
   // social usernames (optional)
-  twitter: 'Kherrisan',
-  github: 'kherrisan',
+  twitter: '',
+  github: '',
   // linkedin: '',
 
   // default notion icon and cover images for site-wide consistency (optional)
