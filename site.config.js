@@ -10,7 +10,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Kherrisan\'s Portifolio',
-  domain: '',
+  domain: 'www.kherrisan.com',
   author: 'Kherrisan',
 
   // open graph metadata (optional)
