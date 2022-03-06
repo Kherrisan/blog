@@ -9,9 +9,9 @@ module.exports = {
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Kherrisan\'s Portifolio',
-  domain: 'www.kherrisan.com',
-  author: 'Kherrisan',
+  name: 'TsouKa\'s Portifolio',
+  domain: 'TsouKa',
+  author: 'TsouKa',
 
   // open graph metadata (optional)
   description: 'Example site description',
