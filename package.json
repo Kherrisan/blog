@@ -25,12 +25,9 @@
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@badrap/bar-of-progress": "^0.1.2",
     "@google-cloud/firestore": "^4.10.1",
-=======
     "@keyv/redis": "^2.2.3",
->>>>>>> 29704773e684d363fdd4759769d66a23e7fd6f23
     "classnames": "^2.3.1",
     "date-fns": "^2.25.0",
     "expiry-map": "^2.0.0",
