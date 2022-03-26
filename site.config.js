@@ -2,16 +2,16 @@ export default {
   // where it all starts -- the site's root Notion page (required)
   //https://www.notion.so/kherrisan/Kherrisan-69ecb7566fda4055ad6b8b0f45e78d59
   //https://kherrisan.notion.site/Test-Page-737413ec9e6d4f9c88be1935868abd22
-  rootNotionPageId: 'Kherrisan-69ecb7566fda4055ad6b8b0f45e78d59',
+  rootNotionPageId: '69ecb7566fda4055ad6b8b0f45e78d59',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'TsouKa\'s Portifolio',
-  domain: 'TsouKa',
-  author: 'TsouKa',
+  name: '邹迪凯\' Portfolio',
+  domain: 'kherrisan.cn',
+  author: '邹迪凯',
 
   // open graph metadata (optional)
   description: 'Example site description',
