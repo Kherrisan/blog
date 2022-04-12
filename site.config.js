@@ -1,6 +1,6 @@
 module.exports = {
   // where it all starts -- the site's root Notion page (required)
-  //https://www.notion.so/kherrisan/Kherrisan-69ecb7566fda4055ad6b8b0f45e78d59
+  // https://www.notion.so/kherrisan/Kherrisan-69ecb7566fda4055ad6b8b0f45e78d59
   rootNotionPageId: 'Kherrisan-69ecb7566fda4055ad6b8b0f45e78d59',
 
   // if you want to restrict pages to a single notion workspace (optional)
