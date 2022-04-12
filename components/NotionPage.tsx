@@ -34,6 +34,7 @@ import { PageActions } from './PageActions'
 import { Footer } from './Footer'
 import { PageSocial } from './PageSocial'
 import { GitHubShareButton } from './GitHubShareButton'
+import { ReactUtterances } from './ReactUtterances'
 
 import styles from './styles.module.css'
 
@@ -133,9 +134,20 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageDescription(block, recordMap) ?? config.description
 
   let pageAside: React.ReactChild = null
+  let comments: React.ReactNode = null
 
   // only display comments and page actions on blog post pages
   if (isBlogPost) {
+    if (config.utterancesGitHubRepo) {
+      comments = (
+        <ReactUtterances
+          repo={config.utterancesGitHubRepo}
+          issueMap='issue-term'
+          issueTerm='title'
+          theme={darkMode.value ? 'photon-dark' : 'github-light'}
+        />
+      )
+    }
     const tweet = getPageTweet(block, recordMap)
     if (tweet) {
       pageAside = <PageActions tweet={tweet} />
@@ -231,6 +243,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={searchNotion}
         pageAside={pageAside}
+        pageFooter={comments}
         footer={
           <Footer
             isDarkMode={darkMode.value}

@@ -101,6 +101,19 @@
   color: #0077b5;
 }
 
+.utterances {
+  margin-top: 2em;
+  width: 100%;
+}
+
+@media only screen and (min-width: 567px) {
+  .utterances {
+    width: calc(100% + 60px);
+    position: relative;
+    left: -60px;
+  }
+}
+
 .comments {
   width: 100%;
   margin-top: 2em;
