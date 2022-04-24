@@ -18,7 +18,7 @@ import { NotionRenderer } from 'react-notion-x'
 // utils
 import { getBlockTitle } from 'notion-utils'
 import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
-import { mapImageUrl } from 'lib/map-image-url'
+import { mapImageUrl, proxyMapImageUrl } from 'lib/map-image-url'
 import { getPageDescription } from 'lib/get-page-description'
 import { getPageTweet } from 'lib/get-page-tweet'
 import { searchNotion } from 'lib/search-notion'
@@ -121,7 +121,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   // const isRootPage =
   //   parsePageId(block.id) === parsePageId(site.rootNotionPageId)
   const isBlogPost =
-  (block.parent_table === 'block' || block.parent_table === 'collection')
+    (block.parent_table === 'block' || block.parent_table === 'collection')
   const showTableOfContents = !!isBlogPost
   const minTableOfContentsItems = 3
 
@@ -169,6 +169,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
       <PageHead site={site} />
 
       <Head>
+        <meta httpEquiv="x-dns-prefetch-control" content="on" />
+        <link rel="dns-prefetch" href="//oss.kherrisan.cn" />
+        <link rel="dns-prefetch" href="//notion.so" />
         <meta property='og:title' content={title} />
         <meta property='og:site_name' content={site.name} />
 
@@ -240,7 +243,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         defaultPageCover={config.defaultPageCover}
         defaultPageCoverPosition={config.defaultPageCoverPosition}
         mapPageUrl={siteMapPageUrl}
-        mapImageUrl={mapImageUrl}
+        mapImageUrl={proxyMapImageUrl}
         searchNotion={searchNotion}
         pageAside={pageAside}
         pageFooter={comments}

@@ -79,13 +79,6 @@ export const utterancesGitHubRepo: string | null = getSiteConfig(
   null
 )
 
-// Optional whether or not to enable support for LQIP preview images
-export const isPreviewImageSupportEnabled: boolean = getSiteConfig(
-  'isPreviewImageSupportEnabled',
-  false
-)
-
-// Optional whether or not to enable support for LQIP preview images
 export const isTweetEmbedSupportEnabled: boolean = getSiteConfig(
   'isTweetEmbedSupportEnabled',
   true
@@ -100,21 +93,21 @@ export const includeNotionIdInUrls: boolean = getSiteConfig(
 // ----------------------------------------------------------------------------
 
 // Optional redis instance for persisting preview images
-export const isRedisEnabled: boolean = getSiteConfig('isRedisEnabled', false)
+// export const isRedisEnabled: boolean = getSiteConfig('isRedisEnabled', false)
 
 // (if you want to enable redis, only REDIS_HOST and REDIS_PASSWORD are required)
 // we recommend that you store these in a local `.env` file
-export const redisHost: string | null = getEnv('REDIS_HOST', null)
-export const redisPassword: string | null = getEnv('REDIS_PASSWORD', null)
-export const redisUser: string = getEnv('REDIS_USER', 'default')
-export const redisUrl = getEnv(
-  'REDIS_URL',
-  `redis://${redisUser}:${redisPassword}@${redisHost}`
-)
-export const redisNamespace: string | null = getEnv(
-  'REDIS_NAMESPACE',
-  'preview-images'
-)
+// export const redisHost: string | null = getEnv('REDIS_HOST', null)
+// export const redisPassword: string | null = getEnv('REDIS_PASSWORD', null)
+// export const redisUser: string = getEnv('REDIS_USER', 'default')
+// export const redisUrl = getEnv(
+//   'REDIS_URL',
+//   `redis://${redisUser}:${redisPassword}@${redisHost}`
+// )
+// export const redisNamespace: string | null = getEnv(
+//   'REDIS_NAMESPACE',
+//   'preview-images'
+// )
 
 // ----------------------------------------------------------------------------
 

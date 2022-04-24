@@ -1,0 +1,29 @@
+org: kherrisan
+app: blog
+stage: dev
+component: http
+name: blog
+
+inputs:
+  src: 
+    dist: ./
+    # hook: npm run build
+    exclude:
+      - '**/node_modules'
+      - '**/package-lock.json'
+      - '**/.next'
+      - .env
+      - .vscode
+      - .github
+      - .git
+  functionName: blog-nextjs
+  region: ap-shanghai
+  faas:
+    runtime: Nodejs14.18
+    framework: nextjs
+    layers:
+      - name: ${output:${stage}:${app}:${name}-node_modules.name}
+        version: ${output:${stage}:${app}:${name}-node_modules.version}
+  staticConf:
+    cosConf:
+      bucket: kc-blog-1253218764 

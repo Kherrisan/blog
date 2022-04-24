@@ -1,12 +1,8 @@
 import { NotionAPI } from 'notion-client'
 import { ExtendedRecordMap, SearchParams, SearchResults } from 'notion-types'
 
-import { getPreviewImageMap } from './preview-images'
 import { getTweetAstMap } from './tweet-embeds'
-import {
-  isPreviewImageSupportEnabled,
-  isTweetEmbedSupportEnabled
-} from './config'
+import { isTweetEmbedSupportEnabled } from './config'
 
 export const notion = new NotionAPI({
   apiBaseUrl: process.env.NOTION_API_BASE_URL
@@ -14,11 +10,6 @@ export const notion = new NotionAPI({
 
 export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
   const recordMap = await notion.getPage(pageId)
-
-  if (isPreviewImageSupportEnabled) {
-    const previewImageMap = await getPreviewImageMap(recordMap)
-    ;(recordMap as any).preview_images = previewImageMap
-  }
 
   if (isTweetEmbedSupportEnabled) {
     const tweetAstMap = await getTweetAstMap(recordMap)

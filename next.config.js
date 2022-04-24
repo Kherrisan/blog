@@ -3,6 +3,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
 
+const STATIC_URL =
+  "https://oss.kherrisan.cn";
+
 module.exports = withBundleAnalyzer({
   staticPageGenerationTimeout: 300,
   images: {
@@ -13,6 +16,7 @@ module.exports = withBundleAnalyzer({
       'pbs.twimg.com',
       'abs.twimg.com'
     ],
-    formats: ['image/avif', 'image/webp']
-  }
+    formats: ['image/avif', 'image/webp'],
+  },
+  assetPrefix: STATIC_URL
 })
