@@ -9,8 +9,8 @@ export const proxyMapImageUrl = (url, block): string => {
     const mappedUrl = defaultMapImageUrl(url, block);
     let m = FILENAME_REGEX.exec(url);
     if (m) {
-        console.log(`https://biproxy.cdn.kherrisan.cn/image${m[0]}`)
-        return `https://biproxy.cdn.kherrisan.cn/image${m[0]}?data=${Buffer.from(mappedUrl).toString('base64')}`;
+        console.log(`https://biproxy-cdn.kherrisan.cn/image${m[0]}`)
+        return `https://biproxy-cdn.kherrisan.cn/image${m[0]}?data=${Buffer.from(mappedUrl).toString('base64')}`;
     }
     url = decodeURIComponent(mappedUrl);
     m = ALI_OSS_REGEX.exec(url);

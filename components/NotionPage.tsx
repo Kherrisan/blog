@@ -169,9 +169,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
       <PageHead site={site} />
 
       <Head>
-        <meta httpEquiv="x-dns-prefetch-control" content="on" />
-        <link rel="dns-prefetch" href="//oss.kherrisan.cn" />
-        <link rel="dns-prefetch" href="//notion.so" />
         <meta property='og:title' content={title} />
         <meta property='og:site_name' content={site.name} />
 
