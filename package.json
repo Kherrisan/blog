@@ -25,9 +25,6 @@
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
   },
   "dependencies": {
-    "@badrap/bar-of-progress": "^0.1.2",
-    "@google-cloud/firestore": "^4.10.1",
-    "@keyv/redis": "^2.2.3",
     "@fisch0920/use-dark-mode": "^2.4.0",
     "@keyvhq/core": "^1.6.9",
     "@keyvhq/redis": "^1.6.10",
@@ -53,7 +50,6 @@
     "react-dom": "^17.0.2",
     "react-notion-x": "^6.12.7",
     "react-tweet-embed": "^2.0.0",
-    "react-static-tweets": "^0.2.6",
     "react-use": "^17.3.2",
     "rss": "^1.2.2"
   },
