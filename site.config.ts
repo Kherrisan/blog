@@ -13,11 +13,6 @@ export default siteConfig({
   domain: 'kherrisan.cn',
   author: '邹迪凯',
 
-  // open graph metadata (optional)
-  description: 'Example site description',
-  socialImageTitle: 'socialImageTitle',
-  socialImageSubtitle: 'socialImageSubtitle 👋',
-
   // social usernames (optional)
   twitter: 'Kherrisan',
   github: 'Kherrisan',

@@ -19,6 +19,8 @@ export interface SiteConfig {
   defaultPageCover?: string | null
   defaultPageCoverPosition?: number | null
 
+  utterancesGitHubRepo?: string | null
+
   isPreviewImageSupportEnabled?: boolean
   isTweetEmbedSupportEnabled?: boolean
   isRedisEnabled?: boolean
