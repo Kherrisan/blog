@@ -23,10 +23,6 @@ export const PageHead: React.FC<
   return (
     <Head>
       <meta charSet='utf-8' />
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
-      <link rel="dns-prefetch" href="//oss.kherrisan.cn" />
-      <link rel="dns-prefetch" href="//biproxy-cdn.kherrisan.cn" />
-      <link rel="dns-prefetch" href="//notion.so" />
       <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
       <meta
         name='viewport'

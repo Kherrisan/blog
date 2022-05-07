@@ -32,6 +32,7 @@ import { NotionPageHeader } from './NotionPageHeader'
 import { GitHubShareButton } from './GitHubShareButton'
 import { ReactUtterances } from './ReactUtterances'
 
+
 import styles from './styles.module.css'
 
 // -----------------------------------------------------------------------------
@@ -206,6 +207,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     ),
     [block, recordMap, isBlogPost]
   )
+
   let comments: React.ReactNode = null
 
   if (isBlogPost) {
@@ -254,8 +256,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const socialImage = mapImageUrl(
     getPageProperty<string>('Social Image', block, recordMap) ||
-    (block as PageBlock).format?.page_cover ||
-    config.defaultPageCover,
+      (block as PageBlock).format?.page_cover ||
+      config.defaultPageCover,
     block
   )
 
