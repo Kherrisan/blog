@@ -10,6 +10,7 @@ export default class MyDocument extends Document {
           <Head>
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
+              id='favicon'
               rel='icon'
               type='image/png'
               sizes='32x32'
@@ -20,6 +21,16 @@ export default class MyDocument extends Document {
           </Head>
 
           <body>
+            <script dangerouslySetInnerHTML={{ __html: `
+              var title = document.title;
+              document.addEventListener('visibilitychange', function () {
+                document.title = document.hidden ? '(●—●)哦豁，崩溃啦！' : '乁( ˙ ω˙乁)咦，又好了!';
+                if (!document.hidden) {
+                  setTimeout(function () { document.title = title; }, 1000);
+                }
+            });
+            ` }}>
+            </script>
             <script
               dangerouslySetInnerHTML={{
                 __html: `
